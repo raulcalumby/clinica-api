@@ -29,5 +29,6 @@
   <li>DELETE /sheduling/:id: exclui o agendamento com o ID especificado</li>
 </ul>
 
-<p>As requisições do projeto podem ser testadas usando o Postman. Um arquivo com as requisições já pré-configuradas está disponível <a href="https://github.com/raulcalumby/clinica-api/postman/">aqui</a>.</p>
+<p>As requisições do projeto podem ser testadas usando o Postman. Um arquivo com as requisições já pré-configuradas está disponível <a href="https://github.com/raulcalumby/clinica-api/tree/master/postman">aqui</a>.</p>
 
+ 
