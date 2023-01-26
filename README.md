@@ -1,28 +1,33 @@
-#Sistema de Agendamento Clínico
-Este é um projeto para criar um sistema de agendamento clínico que permitirá aos pacientes agendar consultas com médicos e gerenciar suas próprias consultas.
+<h1>Agendamento de Consultas</h1>
+<p>Este sistema permite que usuários agendem consultas com profissionais de saúde. Ele utiliza o padrão JWT para autenticação de usuários e fornece as seguintes rotas:</p>
 
-Recursos
-Agendamento de consultas com médicos específicos
-Gerenciamento de consultas agendadas pelo paciente
-Recursos de cancelamento e reagendamento de consultas
-Sistema de login para pacientes e médicos
-Painel de administração para gerenciamento de médicos e consultas
-Tecnologias utilizadas
-Node.js como plataforma principal
-Nest.js para criar a estrutura do servidor
-MongoDB como banco de dados
-Class-validator para validação de dados de entrada
-Instalação
-Para instalar e executar este projeto, você precisará ter o Node.js e o MongoDB instalados em sua máquina.
+<h2>Autenticação</h2>
+<p>Para autenticar, é preciso enviar uma requisição POST para a rota /api/auth/login com as seguintes informações no corpo da requisição:</p>
+<ul>
+  <li>email: endereço de email do usuário</li>
+  <li>password: senha do usuário</li>
+</ul>
+<p>A resposta incluirá um token JWT que deve ser incluído em todas as requisições futuras como uma string "Authorization" no cabeçalho.</p>
 
-Faça o clone do repositório:
-Copy code
-git clone https://github.com/seu-usuario/agendamento-clinico.git
-Instale as dependências:
-Copy code
-npm install
-Inicie o MongoDB em sua máquina
-Inicie o servidor:
-Copy code
-npm start
-Acesse o sistema em seu navegador digitando "http://localhost:3000"
+<h2>Usuários</h2>
+<p>As rotas para gerenciamento de usuários incluem:</p>
+<ul>
+  <li>GET /users: retorna a lista de todos os usuários</li>
+  <li>GET /users/:id: retorna as informações do usuário com o ID especificado</li>
+  <li>POST /users: cria um novo usuário com as informações enviadas no corpo da requisição</li>
+  <li>PATCH /users/:id: atualiza as informações do usuário com o ID especificado</li>
+  <li>DELETE /users/:id: exclui o usuário com o ID especificado</li>
+</ul>
+
+<h2>Agendamento</h2>
+<p>As rotas para gerenciamento de agendamentos incluem:</p>
+<ul>
+  <li>GET /sheduling: retorna a lista de todos os agendamentos</li>
+  <li>GET /sheduling/:id: retorna as informações do agendamento com o ID especificado</li>
+  <li>POST /sheduling: cria um novo agendamento com as informações enviadas no corpo da requisição</li>
+  <li>PATCH /sheduling/:id: atualiza as informações do agendamento com o ID especificado</li>
+  <li>DELETE /sheduling/:id: exclui o agendamento com o ID especificado</li>
+</ul>
+
+<p>As requisições do projeto podem ser testadas usando o Postman. Um arquivo com as requisições já pré-configuradas está disponível <a href="postman/">aqui</a>.</p>
+
