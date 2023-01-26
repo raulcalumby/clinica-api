@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "f21b0f64-5477-4902-9f03-3aa0f1e8ef69",
+		"name": "Sheduling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15332116"
+	},
+	"item": [
+		{
+			"name": "Criar Agendamento",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzQ3NDM1MTUsImV4cCI6MTY3NDc0NDUxNX0.hUD4RS0qUkIEZ0HyTsx_-lCpeCD-g87sCfjuiDT7h-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"date\": \"2000/05/01\",\n    \"patient\": \"2\",\n    \"doctor\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sheduling",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sheduling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar o Agendamento",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzQ3NDM1MTUsImV4cCI6MTY3NDc0NDUxNX0.hUD4RS0qUkIEZ0HyTsx_-lCpeCD-g87sCfjuiDT7h-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"date\": \"2000/05/02\",\n    \"patient\": \"1\",\n    \"doctor\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sheduling/63d29168670eb24cff031939",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sheduling",
+						"63d29168670eb24cff031939"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Agendamento",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzQ3NDM1MTUsImV4cCI6MTY3NDc0NDUxNX0.hUD4RS0qUkIEZ0HyTsx_-lCpeCD-g87sCfjuiDT7h-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/sheduling/63d290007bd5a7427b9ca3d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sheduling",
+						"63d290007bd5a7427b9ca3d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar agendamentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzQ3NDM1MTUsImV4cCI6MTY3NDc0NDUxNX0.hUD4RS0qUkIEZ0HyTsx_-lCpeCD-g87sCfjuiDT7h-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"date\": \"2000/05/01\",\n    \"patient\": \"1\",\n    \"doctor\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sheduling",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sheduling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Agendamentos do Paciente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzQ3NDM1MTUsImV4cCI6MTY3NDc0NDUxNX0.hUD4RS0qUkIEZ0HyTsx_-lCpeCD-g87sCfjuiDT7h-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"date\": \"2000/05/01\",\n    \"patient\": \"1\",\n    \"doctor\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sheduling/patient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sheduling",
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
