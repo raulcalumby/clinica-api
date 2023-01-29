@@ -1,9 +1,11 @@
-import {  IsDefined, IsIn, IsNotEmpty, IsString, ValidateIf } from "class-validator";
+import { IsEmail, IsIn, IsNotEmpty, IsString } from "class-validator";
+import { EmailExists } from "../validation/email-validate";
 
 
 export class CreateUserDto {
-    @IsString()
     @IsNotEmpty()
+    @IsEmail()
+    @EmailExists({message: 'Já existe um usuário com este email'})
     email: string;
     @IsString()
     @IsNotEmpty()

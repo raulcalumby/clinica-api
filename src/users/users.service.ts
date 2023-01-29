@@ -24,8 +24,9 @@ export class UsersService {
   }
 
   update(id: string, updateUserDto: UpdateUserDto) {
-    return this.userModel.findByIdAndUpdate({_id: id}, {updateUserDto}, {new : true})
+    return this.userModel.findByIdAndUpdate({_id: id}, updateUserDto, {new : true})
   }
+
 
   remove(id: string) {
     return this.userModel.deleteOne({_id: id}).exec();
@@ -33,6 +34,7 @@ export class UsersService {
 
   findByEmail(email: string)
   {
+    
     return this.userModel.findOne({email})
   }
 }
