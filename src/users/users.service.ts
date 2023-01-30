@@ -7,11 +7,10 @@ import { User, UserDocument } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
-
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
 
   create(createUserDto: CreateUserDto) {
-    const user = new this.userModel(createUserDto)
+    const user = new this.userModel(createUserDto);
     return user.save();
   }
 
@@ -20,21 +19,20 @@ export class UsersService {
   }
 
   findOne(id: string) {
-    return this.userModel.findById(id)
+    return this.userModel.findById(id);
   }
 
   update(id: string, updateUserDto: UpdateUserDto) {
-    return this.userModel.findByIdAndUpdate({_id: id}, updateUserDto, {new : true})
+    return this.userModel.findByIdAndUpdate({ _id: id }, updateUserDto, {
+      new: true,
+    });
   }
-
 
   remove(id: string) {
-    return this.userModel.deleteOne({_id: id}).exec();
+    return this.userModel.deleteOne({ _id: id }).exec();
   }
 
-  findByEmail(email: string)
-  {
-    
-    return this.userModel.findOne({email})
+  findByEmail(email: string) {
+    return this.userModel.findOne({ email });
   }
 }

@@ -6,15 +6,14 @@ import { UsersModule } from './users/users.module';
 import { ShedulingModule } from './sheduling/sheduling.module';
 import { AuthModule } from './auth/auth.module';
 import { NotificationsModule } from './notifications/notifications.module';
-
+const dotenv = require('dotenv');
+dotenv.config();
 @Module({
   imports: [
     AuthModule,
     UsersModule,
     NotificationsModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://mongo:fHbMj2VpCbe01Yns@clinica.w6nitka.mongodb.net/test',
-    ),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
     ShedulingModule,
     AuthModule,
     NotificationsModule,

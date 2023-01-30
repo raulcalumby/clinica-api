@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type ShedulingDocument = Sheduling & Document ;
+export type ShedulingDocument = Sheduling & Document;
 
 @Schema()
 export class Sheduling {
@@ -10,7 +10,7 @@ export class Sheduling {
 
   @Prop()
   patient: string;
-  
+
   @Prop()
   doctor: string;
 }
