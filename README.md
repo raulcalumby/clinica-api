@@ -29,6 +29,13 @@
   <li>DELETE /sheduling/:id: exclui o agendamento com o ID especificado</li>
 </ul>
 
+<h2>Arquivo .env</h2>
+<p>Antes de começar a utilizar a aplicação, é preciso criar o arquivo .env na raiz do projeto e adicionar as seguintes variáveis:</p>
+<ul>
+  <li>DATABASE_URL: URL da sua base de dados MongoDB</li>
+</ul>
+<p>Este arquivo contém informações sensíveis e não deve ser compartilhado ou adicionado ao controle de versão (como o Git).</p>
+
 <p>As requisições do projeto podem ser testadas usando o Postman. Um arquivo com as requisições já pré-configuradas está disponível <a href="https://github.com/raulcalumby/clinica-api/tree/master/postman">aqui</a>.</p>
 
  
